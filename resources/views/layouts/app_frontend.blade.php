@@ -59,9 +59,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="widget">
-                                <a href="{{ route('home-frontend') }}">
-                                    <img src="{{ url('frontend/images/logo/logo-prolinks.png') }}" class="img-footerlogo">
-                                </a>
+                                <img src="{{ url('frontend/images/logo/logo-prolinks.png') }}" class="img-footerlogo">
                                 <div class="footer-contact">
                                     <p class="helper">Ask how Prolinks can help you.</p>
                                     <p class="contact-details">
