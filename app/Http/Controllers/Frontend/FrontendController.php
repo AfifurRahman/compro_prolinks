@@ -30,6 +30,11 @@ class FrontendController extends Controller
         return view('frontend.home.advance');
     }
 
+    public function ai_insight()
+    {
+        return view('frontend.home.ai-insight');
+    }
+
 
     public function clear_view_cache()
     {

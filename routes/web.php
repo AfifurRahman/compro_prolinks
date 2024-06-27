@@ -134,6 +134,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', 'App\Http\Controllers\Frontend\FrontendController@home')->name('home-frontend');
 Route::get('/advance', 'App\Http\Controllers\Frontend\FrontendController@advance_vdr')->name('home-advance');
+Route::get('/ai-insight', 'App\Http\Controllers\Frontend\FrontendController@ai_insight')->name('home-insight');
 
 Route::get('/run-migrations', function () {
     return Artisan::call('migrate', ["--path" => "database/migrations", "--force" => true ]);

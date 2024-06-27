@@ -2,12 +2,11 @@
 
 @section('content')
     <div class="container-xxl">
-        <link href="{{ url('frontend/css/advance.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url('frontend/css/insight.css') }}" rel="stylesheet" type="text/css" />
 
         <div class="home-container-1">
-            <p class="hcontainer-1">Advanced VDR Services</p>
-            <p class="hcontainer-2">Unlock tomorrow's potential with our cutting-edge VDR solutions. Enhance security, streamline processes, and gain<br>
-            unmatched efficiency. Trust in our expertise for your advanced VDR needs.</p>
+            <p class="hcontainer-1">AI Insights</p>
+            <p class="hcontainer-2">Leverage the power of AI for predictive analytics and automated document indexing.</p>
             <div class="get-started">
                 <a href="" class="get-started-btn">Get started</a>
                 <a href="" class="contact-btn">Contact sales</a>
@@ -15,29 +14,28 @@
         </div>
 
         <div class="home-container-2">
-            <p class="hcontainer-3">Secure and Efficient <span style="color:#4E9EC9;">Document Management</span></p>
-            <p class="hcontainer-4">Our platform provides robust security features and user-friendly interfaces, making it<br>
-            easier than ever to manage sensitive information during due diligence.</p>
+            <p class="hcontainer-3">Predictive Analytics for Informed Decisions</span></p>
+            <p class="hcontainer-4">Our AI-driven predictive analytics provide valuable insights, helping you make<br>
+            informed decisions and stay ahead of the competition.</p>
             <div class="feature-container">
                 <div class="feature-list">
                     <div class="feature">
-                        <p class="feature-title">Drag & drop file upload</p>
-                        <p class="feature-description">Start your brand new data room with one-click data<br>
-                        population. Drag & Drop files and folders from your<br>
-                        computer into the upload window</p>
+                        <p class="feature-title">Predictive Analytics Engine</p>
+                        <p class="feature-description">Gain foresight into market trends and business<br>
+                        outcomes with our AI-driven predictive analytics<br>
+                        engine, enabling more strategic decision-making.</p>
                     </div>
                     <div class="feature">
-                        <p class="feature-title">Save time with bulk upload</p>
-                        <p class="feature-description">Instantly upload documents to the data room. No<br>
-                        limits for size or number of uploaded files. It takes a<br>
-                        moment for the data room to finish uploading.</p>
+                        <p class="feature-title">Smart Document Indexing</p>
+                        <p class="feature-description">Effortlessly organize and manage your documents<br>
+                        with our AI-powered smart indexing, which<br>
+                        automatically categorizes files for optimal efficiency.</p>
                     </div>
                     <div class="feature">
-                        <p class="feature-title">Automatic index numbering</p>
-                        <p class="feature-description">Thousands of documents and folders are<br>
-                        automatically numbered as you upload or move them.<br>
-                        No need to create or update the data room index<br>
-                        manually</p>
+                        <p class="feature-title">AI-Enhanced Reporting</p>
+                        <p class="feature-description">Transform raw data into actionable insights with our<br>
+                        AI-enhanced reporting, offering detailed analysis to<br>
+                        support intelligent business strategies.</p>
                     </div>
                 </div>
                 <div class="feature-illustration">
@@ -47,32 +45,32 @@
         </div>
 
         <div class="home-container-3">
-            <p class="hcontainer-5"><span style="color:#7DB928">Real-Time</span> Collaboration and Access</p>
-            <p class="hcontainer-6">Facilitate seamless collaboration among your team and stakeholders with our VDR solutions. Enjoy real-<br>
-            time document access and editing, ensuring everyone stays on the same page and accelerates the due<br>
-            diligence process.</p>
+            <p class="hcontainer-5">Intelligent Insights and Reporting</p>
+            <p class="hcontainer-6">Our solutions offer comprehensive data analysis, giving you a clear understanding of<br>
+            your business operations and facilitating smarter strategic planning.</p>
             <div class="real-time-feature">
                 <div>
                     <div class="feature-row">
                         <img src="{{ url('frontend/images/feature-img-1.png') }}" class="real-time-img1">
-                        <p class="feature-title">Centralize QnA</p>
-                        <p class="feature-description">While you can track everything and access insightful reports that ensure<br>
-                        compliance, the confidential details of companies and people collaborating<br>
-                        are never disclosed unless you need them to be.</p>
+                        <p class="feature-title">Advanced Data Visualization</p>
+                        <p class="feature-description">Utilize dynamic charts and graphs to visually interpret complex data, making it<br>
+                        easier to identify patterns and trends.</p>
                     </div>
                 </div>
                 <div>
                     <div class="feature-row-left">
                         <img src="{{ url('frontend/images/feature-img-2.png') }}" class="real-time-img2">
-                        <p class="feature-title">Import questions and bulk actions</p>
-                        <p class="feature-description">Import and export multiple questions in bulk from<br>
-                        Excel to and from the virtual data room</p>
+                        <p class="feature-title">Automated Data Summarization</p>
+                        <p class="feature-description">Receive concise summaries of large datasets,<br>
+                        highlighting key insights and critical information for<br>
+                        quick comprehension and decision-making.</p>
                     </div>
                     <div class="feature-row-left">
                         <img src="{{ url('frontend/images/feature-img-3.png') }}" class="real-time-img3">
-                        <p class="feature-title">Easy group setup</p>
-                        <p class="feature-description">Easily manage hundreds of users by dividing them<br>
-                        into groups with different levels of access to projects</p>
+                        <p class="feature-title">Customizable Dashboards</p>
+                        <p class="feature-description">Create tailored dashboards that display relevant<br>
+                        metrics and KPIs in real-time, providing an at-a-<br>
+                        glance overview of your business performance.</p>
                     </div>
                     
                 </div>

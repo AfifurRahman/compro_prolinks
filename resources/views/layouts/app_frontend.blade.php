@@ -36,7 +36,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li class="dropdown mega-menu-item"><a href="{{ route('home-advance') }}">Features</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Features</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Resources</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Pricing</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Company</a></li>

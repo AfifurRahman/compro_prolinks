@@ -1,7 +1,7 @@
 @extends('layouts.app_frontend')
 
 @section('content')
-	<div>
+	<div class="container-xxl">
 		<link href="{{ url('frontend/css/home.css') }}" rel="stylesheet" type="text/css" />
 
 		<div class="home-container-1">
@@ -30,7 +30,7 @@
 						Streamline your due diligence process with our advanced<br>
 						Virtual Data Room (VDR) services.
 					</p>
-					<a class="key-feature-btn" href="">Learn more</a>
+					<a class="key-feature-btn" href="{{ route('home-advance') }}">Learn more</a>
 				</div>
 				<img src="{{ url('frontend/images/key-feature-1.png') }}" class="key-feature-img">
 			</div>
@@ -44,7 +44,7 @@
 						Leverage the power of AI for predictive analytics and automated<br>
 						document indexing.
 					</p>
-					<a class="key-feature-btn" href="">Learn more</a>
+					<a class="key-feature-btn" href="{{ route('home-insight') }}">Learn more</a>
 				</div>
 			</div>
 
