@@ -1,0 +1,274 @@
+.home-container-1 {
+    background: #ECFDF3;
+    padding-top:80px;
+    padding-bottom:120px;
+}
+
+.home-container-1 p{
+    text-align:center;
+}
+
+.home-container-3 {
+    padding-bottom:60px;
+}
+
+.home-container-4 {
+    background: #F3FBFF;
+    padding-bottom:30px;
+}
+
+.home-container-5 {
+    padding-top:100px;
+    padding-bottom:20px;
+    background: linear-gradient(to right, #1C75BC, #4E9EC9, #1C75BC);
+}
+
+.hcontainer-1 {
+    color:#1D2939;
+    font-size:40px;
+    font-weight:600;
+}
+
+.hcontainer-2 {
+    color:#586474;
+    font-size:18px;
+    font-weight:400;
+    margin-top:-16px;
+}
+
+.hcontainer-3 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color:#1D2939;
+}
+
+.hcontainer-4 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color:#586474;
+}
+
+.hcontainer-5 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color:#1D2939;
+}
+
+.hcontainer-6 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color:#586474;
+}
+
+.hcontainer-7 {
+    text-align:center;
+    color: #1D2939;
+    font-weight:600;
+    font-size:36px;
+    padding-top:60px;
+}
+
+.hcontainer-8 {
+    text-align:center;
+    color: #5A6472;
+    font-weight:400;
+    font-size:20px;
+    margin-top:-12px;
+}
+
+.hcontainer-9 {
+    text-align: center;
+    color:#FCFCFD;
+    font-size:36px;
+    font-weight:600;
+}
+
+.hcontainer-10 {
+    text-align: center;
+    color:#FCFCFD;
+    font-size:20px;
+    font-weight:400;
+    margin-top:-12px;
+}
+
+.get-started{
+    display:flex;
+    justify-content: center;
+}
+
+.get-started-btn {
+    background: #1570EF;
+    color: #FFFFFF;
+    padding:10px 16px 10px 16px;
+    border-radius:8px;
+}
+
+.contact-btn {
+    background: #FFFFFF;
+    color: #1570EF;
+    padding:10px 16px 10px 16px;
+    border-radius:8px;
+    margin-left:16px;
+}
+
+.home-container-2 {
+    background: #FFFFFF;
+    padding-top:60px;
+    padding-bottom:120px;
+}
+
+.feature-img {
+    height:427px;
+    width:600px;
+}
+
+.feature-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:48px;
+}
+
+.feature-list {
+    margin-right:100px;
+}
+
+.feature-title {
+    color:#1D2939;
+    font-weight:600;
+    font-size:24px;
+}
+
+.feature-description {
+    color:#586474;
+    font-weight:400;
+    font-size:16px;
+    margin-top:-12px;
+}
+
+.feature {
+    border:1px solid #EDF0F2;
+    padding:6px 12px 6px 12px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.real-time-img1 {
+    width:665px;
+    height:470px;
+    
+}
+
+.real-time-img2 {
+    height:160px;
+    width:455px;
+}
+
+.real-time-img3 {
+    height:160px;
+    width:455px;
+}
+
+.real-time-feature {
+    display:flex;
+    justify-content: center;
+}
+
+.feature-row {
+    padding:20px;
+    border:1px solid #D0D5DD;
+    border-radius:8px;
+}
+
+.feature-row-left {
+    padding:20px;
+    border:1px solid #D0D5DD;
+    border-radius:8px;
+    margin-bottom:22px;
+    margin-left:24px;
+}
+
+.feature-title{
+    color: #1D2939;
+    font-weight:600;
+    font-size:24px;
+    margin-top:16px;
+}
+
+.feature-description {
+    color: #586474;
+    font-weight: 400;
+    font-size:18px;
+    margin-bottom:-4px;
+}
+
+.certification {
+    display:flex;
+    justify-content: center;
+    margin-top:60px;
+    padding-bottom:48px;
+}
+
+.certificate {
+    margin-right:60px;
+}
+
+.certificate-1 {
+    margin-left:120px;
+}
+
+.ceritification-logo{
+    height:48px;
+}
+
+.certificate-title{
+    color:#1D2939;
+    font-weight:600;
+    font-size:16px;
+    margin-top:16px;
+}
+
+.certificate-description{
+    font-size:14px;
+    font-weight:400;
+    color:#1D2939;
+    margin-top:-8px;
+}
+
+.certificate-number{
+    color:#8C96A6;
+    font-weight:400;
+    font-size:14px;
+    margin-top:-12px;
+}
+
+
+.get-started-sign-up{
+    background:#FFFFFF;
+    padding:10px 16px 10px 16px;
+    border-radius:6px;
+    color:#1570EF;
+    font-weight:500;
+    font-size:14px;
+}
+
+.get-started-contact{
+    background:rgba(255,255,255, 0.1);
+    padding:10px 16px 10px 16px;
+    border-radius:6px;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:14px;
+    margin-left:12px;
+}
+
+.get-started-container {
+    text-align:center;
+    display:block;
+    margin-top:48px;
+    margin-bottom:80px;
+}

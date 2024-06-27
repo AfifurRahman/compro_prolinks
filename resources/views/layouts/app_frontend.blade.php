@@ -1,20 +1,3 @@
-@php
-    use App\Models\InformationModel;
-    use App\Models\ContentModel;
-    use App\Models\ArtikelModel;
-
-    $uri = Request::segment(1);
-    $social_media = InformationModel::where('type_content', 3)->get();
-    $contact = InformationModel::where('type_content', 2)->first();
-    $industries = ContentModel::where('type_content', 2)->where('status', 1)->get();
-    $new_insights = ArtikelModel::where('status', 1)->where('category_article_id', 1)->orderBy('id', 'DESC')->take(2)->get();
-
-    $stickyNav = "dark submenu-light";
-    if(\device::is_mobile()){
-        $stickyNav = "header-always-fixed sticky-active";
-    }
-@endphp
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -37,7 +20,7 @@
 
 <body>
     <div class="body-inner">
-        <header id="header" data-transparent="true" data-fullwidth="true" class="{{ $stickyNav }}">
+        <header id="header" data-transparent="true" data-fullwidth="true">
             <div class="header-inner">
                 <div class="container">
                     <div id="logo">
@@ -53,13 +36,13 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li class="dropdown mega-menu-item"><a href="#">Features</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="{{ route('home-advance') }}">Features</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Resources</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Pricing</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Company</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Contact us</a></li>
-                                    <a href="{{ route('insights') }}" class="sign-in">Sign in</a>
-                                    <a href="{{ route('insights') }}" class="sign-up">Sign Up</a>
+                                    <a href="" class="sign-in">Sign in</a>
+                                    <a href="" class="sign-up">Sign Up</a>
                                 </ul>
                             </nav>
                         </div>
@@ -67,8 +50,6 @@
                 </div>
             </div>
         </header>
-
-
 
         @yield('content')
 

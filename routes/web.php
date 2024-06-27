@@ -133,31 +133,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', 'App\Http\Controllers\Frontend\FrontendController@home')->name('home-frontend');
-Route::get('/search', 'App\Http\Controllers\Frontend\FrontendController@search')->name('search');
-Route::get('/about-us', 'App\Http\Controllers\Frontend\FrontendController@about_us')->name('about-us.overview');
-Route::get('/key-values-principles', 'App\Http\Controllers\Frontend\FrontendController@key_values_principles')->name('about-us.key-values-principles');
-Route::get('/why-choose-us', 'App\Http\Controllers\Frontend\FrontendController@why_choose_us')->name('about-us.why-choose-us');
-Route::get('/our-team', 'App\Http\Controllers\Frontend\FrontendController@our_team')->name('about-us.our-team');
-Route::get('/our-team/{slug}', 'App\Http\Controllers\Frontend\FrontendController@detail_our_team')->name('about-us.detail-our-team');
-Route::get('/affiliation-partnership', 'App\Http\Controllers\Frontend\FrontendController@affiliation_partnership')->name('about-us.affiliation-partnership');
+Route::get('/advance', 'App\Http\Controllers\Frontend\FrontendController@advance_vdr')->name('home-advance');
 
-Route::get('/all-industries', 'App\Http\Controllers\Frontend\FrontendController@all_industries')->name('industries.all-industries');
-Route::get('/industries/{title}', 'App\Http\Controllers\Frontend\FrontendController@detail_industries')->name('industries.detail-industries');
-Route::get('/industries/readmore/{title}', 'App\Http\Controllers\Frontend\FrontendController@readmore_industries')->name('industries.readmore-industries');
-
-Route::get('/all-service', 'App\Http\Controllers\Frontend\FrontendController@all_services')->name('services.all-services');
-Route::get('/transaction-advisory-services', 'App\Http\Controllers\Frontend\FrontendController@tas')->name('services.tas');
-Route::get('/due-diligence', 'App\Http\Controllers\Frontend\FrontendController@due_diligence')->name('services.due-diligence');
-Route::get('/valuation', 'App\Http\Controllers\Frontend\FrontendController@valuation')->name('services.valuation');
-Route::get('/debt-advisory', 'App\Http\Controllers\Frontend\FrontendController@debt_advisory')->name('services.debt-advisory');
-Route::get('/tax-advisory', 'App\Http\Controllers\Frontend\FrontendController@tax_advisory')->name('services.tax-advisory');
-Route::get('/technology-digital', 'App\Http\Controllers\Frontend\FrontendController@technology_digital')->name('services.technology-digital');
-
-Route::get('/insights/', 'App\Http\Controllers\Frontend\FrontendController@insights')->name('insights');
-Route::get('/insights/{slug}', 'App\Http\Controllers\Frontend\FrontendController@detail_insights')->name('detail-insights');
-
-Route::get('/contacts', 'App\Http\Controllers\Frontend\FrontendController@contacts')->name('contacts');
-Route::post('/save-contacts', 'App\Http\Controllers\Frontend\FrontendController@save_contacts')->name('save-contacts');
 Route::get('/run-migrations', function () {
     return Artisan::call('migrate', ["--path" => "database/migrations", "--force" => true ]);
 });
