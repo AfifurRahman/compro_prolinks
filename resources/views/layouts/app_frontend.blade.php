@@ -22,21 +22,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('description')">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" href="{{ url('frontend/images/favicon.png') }}" type="image/x-icon" />
-    <!-- <title>{{ config('app.name', 'Protemus Consulting') }}</title> -->
-    <title>@yield('title', 'Protemus Consulting')</title>
+    <link rel="icon" href="{{ url('frontend/images/logo/logo-prolinks.png') }}" type="image/x-icon" />
+    <title>@yield('title', 'Prolinks')</title>
 
-    <!-- Scripts -->
+    <link href="{{ url('frontend/css/view.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('frontend/css/plugins.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('frontend/css/style.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('frontend/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('frontend/css/owl.carousel.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <div class="body-inner">
         <header id="header" data-transparent="true" data-fullwidth="true" class="{{ $stickyNav }}">
@@ -44,27 +42,9 @@
                 <div class="container">
                     <div id="logo">
                         <a href="{{ route('home-frontend') }}">
-                            <span class="logo-default"><img src="{{ url('frontend/images/logo.png') }}"></span>
-                            <span class="logo-dark"><img src="{{ url('frontend/images/logo.png') }}"></span>
+                            <span class="logo-default"><img class="img-logo" src="{{ url('frontend/images/logo/logo-prolinks.png') }}"></span>
+                            <span class="logo-dark"><img class="img-logo" src="{{ url('frontend/images/logo/logo-prolinks.png') }}"></span>
                         </a>
-                    </div>
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="{{ route('search') }}" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-                    <div class="header-extras">
-                        <ul>
-                            <li>
-                                <a id="btn-search" href="#"> <i class="icon-search"></i></a>
-                            </li>
-                            @if(!\device::is_mobile())
-                                <li>
-                                    <a class="btn btn-custom-consult" href="{{ route('contacts') }}"> Consult us</a>
-                                </li>
-                            @endif
-                        </ul>
                     </div>
                     <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
@@ -73,170 +53,13 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li class="dropdown mega-menu-item"><a href="#">About us</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="mega-menu-content" style="z-index: 999999;">
-                                                <div class="row">
-                                                    @if(!\device::is_mobile())
-                                                        <div class="col-lg-4">
-                                                            <div class="menu-about-protemus">
-                                                                <h3>Protemus Consulting</h3>
-                                                                <p>At Protemus Consulting, we specialize in guiding international startups, mid-sized private equity firms, and growing companies through M&A, ensuring an exceptional journey in Indonesia.</p>
-                                                            </div>
-                                                        </div>
-                                                    @endif
-                                                    <div class="col-lg-4">
-                                                        <div class="menu-about-protemus">
-                                                            <h3>About us</h3>
-                                                            <ul>
-                                                                <a href="{{ route('about-us.overview') }}"><li>Overview</li></a>
-                                                                <a href="{{ route('about-us.key-values-principles') }}"><li>Key Values & Principles</li></a>
-                                                                <a href="{{ route('about-us.why-choose-us') }}"><li>Why Choose Us</li></a>
-                                                                <a href="{{ route('about-us.our-team') }}"><li>Our People & Leadership</li></a>
-                                                                <a href="{{ route('about-us.affiliation-partnership') }}"><li>Affiliation & Partnership</li></a>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="menu-about-featured {{ \device::is_mobile() ? 'boder-top-menu':'boder-left-menu' }}">
-                                                            <h3 style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">Featured</h3>
-                                                            @if(count($new_insights) > 0)
-                                                                @foreach($new_insights as $newsx)
-                                                                    <div class="body-about-featured" style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">
-                                                                        <a href="{{ route('detail-insights', $newsx->slug) }}">
-                                                                            <p>
-                                                                                {!! strip_tags($newsx->judul) !!}<br>
-                                                                                <span>{{ date('F d', strtotime($newsx->created_at))}}, {{ date('Y', strtotime($newsx->created_at)) }}</span>
-                                                                            </p>
-                                                                        </a>
-                                                                    </div>
-                                                                @endforeach
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Industries</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="mega-menu-content">
-                                                <div class="row">
-                                                    <div class="col-lg-8">
-                                                        <div class="body-industries-protemus">
-                                                            <h3>Industries</h3>
-                                                            <div class="row">
-                                                                <div class="col-lg-4">
-                                                                    <ul class="menu-industries-protemus">
-                                                                        <li><a href="{{ route('industries.all-industries') }}">All industries</a></li>
-                                                                        @if(count($industries) > 0)
-                                                                            @foreach($industries as $key => $industry)
-                                                                                @if($key <= 2)
-                                                                                    <li><a href="{{ route('industries.detail-industries', $industry->slug) }}">{{ $industry->title }}</a></li>
-                                                                                @endif
-                                                                            @endforeach
-                                                                        @endif
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-4">
-                                                                    <ul class="menu-industries-protemus">
-                                                                        @if(count($industries) > 0)
-                                                                            @foreach($industries as $key => $industry)
-                                                                                @if($key <= 6 && $key >= 3)
-                                                                                    <li><a href="{{ route('industries.detail-industries', $industry->slug) }}">{{ $industry->title }}</a></li>
-                                                                                @endif
-                                                                            @endforeach
-                                                                        @endif
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-4">
-                                                                    <ul class="menu-industries-protemus">
-                                                                        @if(count($industries) > 0)
-                                                                            @foreach($industries as $key => $industry)
-                                                                                @if($key >= 7 && $key <= 9)
-                                                                                    <li><a href="{{ route('industries.detail-industries', $industry->slug) }}">{{ $industry->title }}</a></li>
-                                                                                @endif
-                                                                            @endforeach
-                                                                        @endif
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="menu-about-featured {{ \device::is_mobile() ? 'boder-top-menu':'boder-left-menu' }}">
-                                                            <h3 style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">Featured</h3>
-                                                            @if(count($new_insights) > 0)
-                                                                @foreach($new_insights as $newsx1)
-                                                                    <div class="body-about-featured" style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">
-                                                                        <a href="{{ route('detail-insights', $newsx1->slug) }}">
-                                                                            <p>
-                                                                                {!! $newsx1->judul !!}<br>
-                                                                                <span>{{ date('F d', strtotime($newsx1->created_at))}}, {{ date('Y', strtotime($newsx1->created_at)) }}</span>
-                                                                            </p>
-                                                                        </a>
-                                                                    </div>
-                                                                @endforeach
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Services</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="mega-menu-content">
-                                                <div class="row">
-                                                    <div class="col-lg-8">
-                                                        <div class="body-industries-protemus">
-                                                            <h3>Services</h3>
-                                                            <div class="row">
-                                                                <div class="col-lg-6">
-                                                                    <ul class="menu-industries-protemus">
-                                                                        <li><a href="{{ route('services.all-services') }}">All services</a></li>
-                                                                        <li><a href="{{ route('services.tas') }}">Transaction Advisory Services (TAS)</a></li>
-                                                                        <li><a href="{{ route('services.due-diligence') }}">Due Diligence</a></li>
-                                                                        <li><a href="{{ route('services.valuation') }}">Valuation</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <ul class="menu-industries-protemus">
-                                                                        <li><a href="{{ route('services.debt-advisory') }}">Debt Advisory</a></li>
-                                                                        <li><a href="{{ route('services.tax-advisory') }}">Tax Advisory</a></li>
-                                                                        <li><a href="{{ route('services.technology-digital') }}">Technology & Digital Transformation Advisory</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="menu-about-featured {{ \device::is_mobile() ? 'boder-top-menu':'boder-left-menu' }}">
-                                                            <h3 style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">Featured</h3>
-                                                            @if(count($new_insights) > 0)
-                                                                @foreach($new_insights as $newsx2)
-                                                                    <div class="body-about-featured" style="margin-left: {{ \device::is_mobile() ? '0px':'64px' }}">
-                                                                        <a href="{{ route('detail-insights', $newsx2->slug) }}">
-                                                                            <p>
-                                                                                {!! $newsx2->judul !!}<br>
-                                                                                <span>{{ date('F d', strtotime($newsx2->created_at))}}, {{ date('Y', strtotime($newsx2->created_at)) }}</span>
-                                                                            </p>
-                                                                        </a>
-                                                                    </div>
-                                                                @endforeach
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{ route('insights') }}">Insights</a></li>
-                                    @if(\device::is_mobile())
-                                        <li>
-                                            <a class="btn btn-custom-consult" href="{{ route('contacts') }}"> Consult us</a>
-                                        </li>
-                                    @endif
+                                    <li class="dropdown mega-menu-item"><a href="#">Features</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Resources</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Pricing</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Company</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Contact us</a></li>
+                                    <a href="{{ route('insights') }}" class="sign-in">Sign in</a>
+                                    <a href="{{ route('insights') }}" class="sign-up">Sign Up</a>
                                 </ul>
                             </nav>
                         </div>
@@ -244,23 +67,11 @@
                 </div>
             </div>
         </header>
+
+
+
         @yield('content')
-        @if($uri != "contacts")
-            <div class="data-block-help">
-                <div class="body-block-help">
-                    <h3>How can we help you?</h3>
-                    <p>Get in touch with us or find an office closest to you.</p>
-                    <div class="body-btn-block-help">
-                        <a href="{{ route('contacts') }}" class="btn btn-custom-block-help">
-                            Get in touch
-                        </a>
-                        <a href="{{ route('contacts') }}" class="btn btn-outline btn-dark noradius">
-                            Our location
-                        </a>
-                    </div>
-                </div>
-            </div>
-        @endif
+
         <footer id="footer">
             <div class="footer-content">
                 <div class="container">
@@ -268,46 +79,43 @@
                         <div class="col-lg-4">
                             <div class="widget">
                                 <a href="{{ route('home-frontend') }}">
-                                    <img src="{{ url('frontend/images/logo.png') }}">
+                                    <img src="{{ url('frontend/images/logo/logo-prolinks.png') }}" class="img-footerlogo">
                                 </a>
-                                <p class="custom-footer-size custom-footer-margin">
-                                    Ciputra International, Office Tower 3 <br>
-                                    Floor 15 Unit 05 <br>
-                                    Jl. Lingkar Luar Barat No. 101 <br>
-                                    Jakarta 11740
-                                </p>
-                                <p class="custom-footer-size custom-get-direction"><a href="https://maps.app.goo.gl/RqDHwW4y83JvF1Zw9" class="text-success" target="_blank"><i class="fa fa-map-marker"></i> Get direction</a></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="widget">
-                                <div class="widget-title custom-widget-title">Contact Us</div>
-                                <span class="custom-footer-size">Ask how Protemus Consulting can help you.</span>
-                                <ul class="list custom-list">
-                                    <li><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="#" class="custom-contact-footer">{{ !empty($contact->value1) ? $contact->value1 : '' }}</a></li>
-                                    <li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="#" class="custom-contact-footer">{{ !empty($contact->value4) ? $contact->value4 : '' }}</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="widget">
-                                <div class="widget-title custom-widget-title">Useful Links</div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="list custom-list-menu-footer">
-                                            <li><a href="{{ route('home-frontend') }}">Home</a></li>
-                                            <li><a href="{{ route('about-us.overview') }}">About us</a></li>
-                                            <li><a href="{{ route('industries.all-industries') }}">Industries</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="list custom-list-menu-footer">
-                                            <li><a href="{{ route('services.all-services') }}">Services</a></li>
-                                            <li><a href="{{ route('insights') }}">Insights</a></li>
-                                            <li><a href="{{ route('contacts') }}">Contact us</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="footer-contact">
+                                    <p class="helper">Ask how Prolinks can help you.</p>
+                                    <p class="contact-details">
+                                    +6221 3972 6868<br>
+                                    info@prolink.id
+                                    </p>
                                 </div>
+                                <div class="footer-social-media">
+                                    <a href=""><img src="{{ url('frontend/images/facebook.png') }}" class="social-media"></a>
+                                    <a href=""><img src="{{ url('frontend/images/linkedin.png') }}" class="social-media"></a>
+                                    <a href=""><img src="{{ url('frontend/images/instagram.png') }}" class="social-media"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="footer-location">
+                                <p class="footer-location-title">Location</p>
+                                <p class="footer-location-details">
+                                Ciputra International, Office Tower 3<br>
+                                Floor 15 Unit 05<br>
+                                Jl. Lingkar Luar Barat No. 101<br>
+                                Jakarta 11740
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="footer-link">
+                                <p class="footer-link-title">Company</p>
+                                <ul>
+                                    <li><a href="" class="footer-link-item">About us</a></li>
+                                    <li><a href="" class="footer-link-item">Contact support</a></li>
+                                    <li><a href="" class="footer-link-item">Testimonial</a></li>
+                                    <li><a href="" class="footer-link-item">Blog</a></li>
+                                </ul>
+                            
                             </div>
                         </div>
                     </div>
@@ -315,7 +123,18 @@
             </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="text-left footer-text">Copyright ©{{ date('Y') }} Protemus Consulting</div>
+                    <div class="divider"></div>
+                    <div class="end-footer">
+                        <div class="text-left">
+                            <p class="copyright-text">Copyright ©{{ date('Y') }} Prolinks</p>
+                        </div>
+                        <div class="text-right" >
+                            <div class="policy-text">
+                                <a href="" class="privacy-link">Privacy Policy</a>
+                                <a href="" class="terms-link">Terms of use</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

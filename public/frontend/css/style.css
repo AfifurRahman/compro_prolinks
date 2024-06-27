@@ -1453,6 +1453,7 @@ Topbar
 #header.dark #header-wrap #logo a [class*="logo-"] {
   display: none;
 }
+
 .dark #header .header-inner #logo a .logo-dark,
 .dark #header #header-wrap #logo a .logo-dark,
 #header.dark .header-inner #logo a .logo-dark,
@@ -6720,21 +6721,17 @@ Portfolio
 #footer {
   display: block;
   position: relative;
-  background-color: #f8f9fa;
+  background-color: #FFFFFF;
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
-#footer a:not(.btn):not(:hover) {
-  color: #484848;
-}
+
 #footer p {
   font-family: "Poppins", sans-serif;
 }
-#footer a:not(.btn) {
-  font-weight: 400;
-}
+
 #footer .footer-content {
   padding: 60px 0 40px 0;
 }
@@ -6754,7 +6751,7 @@ Portfolio
 #footer .copyright-content {
   min-height: 80px;
   padding: 30px 0;
-  background-color: #eff1f4;
+  background-color: #FFFFFF;
   font-size: 13px;
 }
 #footer .logo {
@@ -6777,16 +6774,6 @@ Portfolio
 .dark #footer p,
 #footer.inverted p,
 #footer.dark p {
-  color: #999;
-}
-.dark #footer a:not(.btn),
-#footer.inverted a:not(.btn),
-#footer.dark a:not(.btn) {
-  font-weight: 400;
-}
-.dark #footer a:not(.btn):not(:hover),
-#footer.inverted a:not(.btn):not(:hover),
-#footer.dark a:not(.btn):not(:hover) {
   color: #999;
 }
 .dark #footer h1,
@@ -6847,12 +6834,6 @@ Portfolio
   display: table;
 }
 .widget .flickity-page-dots {
-  margin-bottom: 20px;
-}
-.widget a {
-  color: #484848;
-}
-.widget p {
   margin-bottom: 20px;
 }
 
