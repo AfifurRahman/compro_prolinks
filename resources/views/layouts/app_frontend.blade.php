@@ -38,7 +38,7 @@
                                 <ul>
                                     <li class="dropdown mega-menu-item"><a href="#">Features</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Resources</a></li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Pricing</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="{{ route('pricing') }}">Pricing</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Company</a></li>
                                     <li class="dropdown mega-menu-item"><a href="#">Contact us</a></li>
                                     <a href="" class="sign-in">Sign in</a>

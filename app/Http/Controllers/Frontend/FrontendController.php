@@ -35,6 +35,10 @@ class FrontendController extends Controller
         return view('frontend.home.ai-insight');
     }
 
+    public function pricing()
+    {
+        return view('frontend.home.pricing');
+    }
 
     public function clear_view_cache()
     {

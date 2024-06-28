@@ -1,7 +1,7 @@
 @extends('layouts.app_frontend')
 
 @section('content')
-    <div class="container-xxl">
+    <div>
         <link href="{{ url('frontend/css/advance.css') }}" rel="stylesheet" type="text/css" />
 
         <div class="home-container-1">
@@ -112,7 +112,6 @@
 				<a href="" class="get-started-contact">Contact sales</a>
 			</div>
 		</div>
-	</div>
     </div>
 @endsection
 
