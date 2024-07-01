@@ -1,0 +1,96 @@
+.about-company-title {
+    color: #1D2939;
+    margin-top:36px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    max-width: 50%;
+    width: 50%;
+}
+
+.about-company-text {
+    max-width: 50%;
+    width:50%;
+    margin-top:36px;
+    color:#1D2939;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.about-company-mission {
+    color: #1D2939;
+    max-width: 50%;
+    width:50%;
+    font-size: 20px;
+    font-weight:600;
+    text-align: end;
+    padding-right:36px;
+    margin-top:36px;
+}
+
+.company-container-1 {
+    padding-top:60px;
+}
+
+.company-container-2 {
+    background: linear-gradient(to right, #7DB928, #319F2D);
+    height: 174px;
+    margin-top:44px;
+}
+
+.company-container-3 {
+    background: #ECFDF3;
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+
+.awards-row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 174px;
+}
+
+.award-row p{
+    color: #FFFFFF;
+}
+
+.award-row-up {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.award-row-bottom {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0px;
+}
+
+.synergy-img {
+    width: 592px;
+    height: 320px;
+}
+
+.about-synergy {
+    width:50%;
+    padding-right:30px;
+}
+
+.company-profile {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-name {
+    color: #1D2939;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.company-mission {
+    color: #1D2939;
+    font-size: 16px;
+    font-weight: 400;
+}
