@@ -24,7 +24,6 @@ class FrontendController extends Controller
     	return view('frontend.home.home');
     }
     
-
     public function advance_vdr()
     {
         return view('frontend.home.advance');
