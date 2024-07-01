@@ -40,6 +40,11 @@ class FrontendController extends Controller
         return view('frontend.home.pricing');
     }
 
+    public function company()
+    {
+        return view('frontend.home.company');
+    }
+
     public function clear_view_cache()
     {
         Artisan::call('view:clear');

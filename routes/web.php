@@ -136,6 +136,7 @@ Route::get('/', 'App\Http\Controllers\Frontend\FrontendController@home')->name('
 Route::get('/advance', 'App\Http\Controllers\Frontend\FrontendController@advance_vdr')->name('home-advance');
 Route::get('/ai-insight', 'App\Http\Controllers\Frontend\FrontendController@ai_insight')->name('home-insight');
 Route::get('/pricing', 'App\Http\Controllers\Frontend\FrontendController@pricing')->name('pricing');
+Route::get('/company', 'App\Http\Controllers\Frontend\FrontendController@company')->name('company');
 
 Route::get('/run-migrations', function () {
     return Artisan::call('migrate', ["--path" => "database/migrations", "--force" => true ]);

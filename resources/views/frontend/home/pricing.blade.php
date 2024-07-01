@@ -22,19 +22,19 @@
                 <div class="pricing-box-1">
                     <div class="pricing-content">
                         <p class="pricing-name">Profesional</p>
-                        <p class="pricing-desc">Streamlined secure document sharing for small<br>
+                        <p class="pricing-desc">Streamlined secure document sharing for small
                         and mid-size projects.</p>
                         <p class="pricing-price">$3,350</p>
-                        <div class="pricing-feature">
-                            <p>1 project</p>
-                            <p>5 administrators</p>
-                            <p>Unlimited users</p>
-                        </div>
+                        <ul class="pricing-feature">
+                            <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">1</span> project</li>
+                            <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">5</span> administrators</li>
+                            <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">Unlimited</span> users</li>
+                        </ul>
                         <a href="" class="pricing-btn">Select Package</a>
                         <div class="divider-row"></div>
                         <div class="pricing-support">
                             <p>Pro plan includes</p>
-                            <ul>
+                            <ul class="pricing-support-list">
                                 <li>24/7 multilingual support</li>
                                 <li>2-step verification</li>
                                 <li>Customizable dynamic watermarks</li>
@@ -49,19 +49,19 @@
                     <div class="pricing-box-2">
                         <div class="pricing-content">
                             <p class="pricing-name">Business</p>
-                            <p class="pricing-desc">Confidently manage larger transactions with<br>
+                            <p class="pricing-desc">Confidently manage larger transactions with
                             expert guidance.</p>
                             <p class="pricing-price">Contact sales</p>
-                            <div class="pricing-feature">
-                                <p>Unlimited project</p>
-                                <p>Unlimited administrators</p>
-                                <p>Unlimited users</p>
-                            </div>
+                            <ul class="pricing-feature">
+                                <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">Unlimited</span> project</li>
+                                <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">Unlimited</span> administrators</li>
+                                <li><img src="{{ url('frontend/images/check.png') }}" class="img-list" /><span style="font-weight:600;">Unlimited</span> users</li>
+                            </ul>
                             <a href="" class="pricing-btn">Get a quote</a>
                             <div class="divider-row"></div>
                             <div class="pricing-support">
                                 <p>Everything in Pro, plus</p>
-                                <ul>
+                                <ul class="pricing-support-list">
                                     <li>Extended Premier support</li>
                                     <li>Unlimited live training with an expert</li>
                                     <li>Multi-project management</li>
