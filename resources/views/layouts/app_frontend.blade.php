@@ -36,11 +36,33 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li class="dropdown mega-menu-item"><a href="#">Features</a></li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Resources</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="#">Features &#9660;</a>
+                                    <ul class="dropdown-menu">
+                                            <li class="mega-menu-content">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <div class="body-industries-protemus">
+                                                            <h3>Features</h3>
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <ul class="menu-industries-protemus">
+                                                                        <li><a href="{{ route('home-advance') }}">Advanced VDR Services</a></li>
+                                                                        <li><a href="{{ route('home-insight') }}">AI Insights</a></li>
+                                                                        <li><a href="#">Customizable Workflows</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown mega-menu-item"><a href="{{ route('resource') }}">Resources</a></li>
                                     <li class="dropdown mega-menu-item"><a href="{{ route('pricing') }}">Pricing</a></li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Company</a></li>
-                                    <li class="dropdown mega-menu-item"><a href="#">Contact us</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="{{ route('company') }}">Company</a></li>
+                                    <li class="dropdown mega-menu-item"><a href="{{ route('contact') }}">Contact us</a></li>
                                     <a href="" class="sign-in">Sign in</a>
                                     <a href="" class="sign-up">Sign Up</a>
                                 </ul>
