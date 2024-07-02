@@ -138,6 +138,7 @@ Route::get('/ai-insight', 'App\Http\Controllers\Frontend\FrontendController@ai_i
 Route::get('/pricing', 'App\Http\Controllers\Frontend\FrontendController@pricing')->name('pricing');
 Route::get('/company', 'App\Http\Controllers\Frontend\FrontendController@company')->name('company');
 Route::get('/contact', 'App\Http\Controllers\Frontend\FrontendController@contact')->name('contact');
+Route::get('/resource', 'App\Http\Controllers\Frontend\FrontendController@resource')->name('resource');
 
 Route::get('/run-migrations', function () {
     return Artisan::call('migrate', ["--path" => "database/migrations", "--force" => true ]);

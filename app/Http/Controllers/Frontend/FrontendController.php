@@ -49,6 +49,11 @@ class FrontendController extends Controller
         return view('frontend.home.contact');
     }
 
+    public function resource()
+    {
+        return view('frontend.home.resource');
+    }
+
     public function clear_view_cache()
     {
         Artisan::call('view:clear');
