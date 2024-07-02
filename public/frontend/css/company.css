@@ -44,6 +44,31 @@
     padding-bottom: 60px;
 }
 
+.company-container-4 {
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+.company-container-5 {
+    background-color: #FFFFFF;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+.company-container-6 {
+    background-color: #EFF8FF;
+    display: block;
+    height:350px;
+    z-index: -1;
+    margin-top:-340px;
+}
+
+.company-container-7 {
+    background-color: #FFFFFF;
+    display: block;
+    height:540px;
+}
+
 .awards-row {
     display:flex;
     justify-content: space-between;
@@ -93,4 +118,205 @@
     color: #1D2939;
     font-size: 16px;
     font-weight: 400;
+}
+
+.company-list-header {
+    color: #1D2939;
+    font-weight: 600;
+    font-size:32px;
+    text-align: center;
+}
+
+.company-container-4 img{
+    height:72px;
+    margin-bottom:20px;
+}
+
+.company-list {
+    display: flex;
+    margin-top:80px;
+    justify-content: space-between;
+}
+
+.protemus-consulting {
+    width:48%;
+    max-width: 50%;
+    padding-right: 18px;
+    padding-left:18px;
+    padding-top:24px;
+    padding-bottom:12px;
+    border:1px solid #D0D5DD;
+    border-radius: 10px;
+}
+
+.protemus-capital {
+    width:48%;
+    max-width: 50%;
+    padding-right:18px;
+    padding-left:18px;
+    padding-top:24px;
+    padding-bottom:12px;
+    border:1px solid #D0D5DD;
+    border-radius: 10px;
+}
+
+.company-desc {
+    color: #1D2939;
+    font-size:16px;
+    font-weight: 400;
+}
+
+.contact-us {
+    display:flex;
+    justify-content: space-between;
+}
+
+.contact-us-text {
+    color: #1D2939;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.contact-us-description {
+    color: #586474;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.contact-description {
+    width:80%;
+    max-width: 80%;
+}
+
+.contact-support {
+    color: #000000;
+    font-size: 20px;
+    font-weight:600;
+    line-height: 32px;
+}
+
+.contact-details {
+    max-width:56%;
+    width:56%;
+}
+
+.contact-detail {
+    border:1px solid #D0D5DD;
+    border-radius: 8px;
+    padding:20px 20px 6px 20px;
+}
+
+.contact-number {
+    color: #586474;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contact-number img{
+    height:24px;
+    margin-right:14px;
+}
+
+.contact-email img{
+    height:24px;
+    margin-right:14px;
+}
+
+.contact-email {
+    color: #586474;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contact-form {
+    background: #F9FAFB;
+    border:1px solid #D0D5DD;
+    border-radius: 8px;
+    width:40%;
+    max-width: 40%;
+}
+
+.form-fill {
+    width:86%;
+    max-width: 86%;
+    margin:auto;
+    padding-top:18px;
+    padding-bottom: 24px;
+}
+
+.form-fill button{
+    background:#1570EF;
+    color:#FFFFFF;
+    border:none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    height:36px;
+    width:100%;
+}
+
+.contact-form p{
+    color:#1D2939;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 0px;
+    margin-top:32px;
+}
+
+.contact-form input{
+    width:100%;
+    height: 36px;
+    border:1px solid #D0D5DD;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.home-container-5 {
+    padding-top:100px;
+    padding-bottom:20px;
+    background: linear-gradient(to right, #1C75BC, #4E9EC9, #1C75BC);
+}
+
+.hcontainer-9 {
+    text-align: center;
+    color:#FCFCFD;
+    font-size:36px;
+    font-weight:600;
+}
+
+.hcontainer-10 {
+    text-align: center;
+    color:#FCFCFD;
+    font-size:20px;
+    font-weight:400;
+    margin-top:-12px;
+}
+
+.get-started-sign-up{
+    background:#FFFFFF;
+    padding:10px 16px 10px 16px;
+    border-radius:6px;
+    color:#1570EF;
+    font-weight:500;
+    font-size:14px;
+}
+
+.get-started-contact{
+    background:rgba(255,255,255, 0.1);
+    padding:10px 16px 10px 16px;
+    border-radius:6px;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:14px;
+    margin-left:12px;
+}
+
+.get-started-container {
+    text-align:center;
+    display:block;
+    margin-top:48px;
+    margin-bottom:80px;
 }
