@@ -51,6 +51,7 @@ class FrontendController extends Controller
 
     public function resource()
     {
+        $article = ArtikelModel::where('status', 1)->orderBy('id', 'DESC')->get();
         return view('frontend.home.resource');
     }
 
