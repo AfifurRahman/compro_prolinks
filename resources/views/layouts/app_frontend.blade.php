@@ -63,7 +63,7 @@
                                     <li class="dropdown mega-menu-item"><a href="{{ route('pricing') }}">Pricing</a></li>
                                     <li class="dropdown mega-menu-item"><a href="{{ route('company') }}">Company</a></li>
                                     <li class="dropdown mega-menu-item"><a href="{{ route('contact') }}">Contact us</a></li>
-                                    <a href="" class="sign-in">Sign in</a>
+                                    <a href="https://prolinks.id/login" class="sign-in">Sign in</a>
                                     <a href="" class="sign-up">Sign Up</a>
                                 </ul>
                             </nav>
