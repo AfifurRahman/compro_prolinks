@@ -92,6 +92,7 @@
     max-width: 100%;
 }
 
+
 .content-row {
     width:100%;
     max-width: 100%;
@@ -111,6 +112,17 @@
 .content-item {
     height:392px;
     width:32%;
+    max-width: 32%;
+    border:1px solid #8C96A6;
+    border-radius: 8px;
+    padding:20px;
+}
+
+.content-item-hidden {
+    visibility: hidden;
+    height:392px;
+    width:32%;
+    max-width: 32%;
     border:1px solid #8C96A6;
     border-radius: 8px;
     padding:20px;
@@ -150,18 +162,23 @@
 }
 
 .paging {
+    display:flex;
     width: fit-content;
 }
 
 .page-number {
+    display:block;
     height:32px;
     width:32px;
     border:1px solid #D0D5DD;
     background: #FFFFFF;
     color:#586474;
     border-radius: 8px;
+    text-align: center;
+    line-height: 30px;
     font-size: 14px;
     font-weight: 400;
+    margin-left:6px;
 }
 
 .banner-contact {

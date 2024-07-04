@@ -55,6 +55,7 @@
                   <div class="col-sm-9">
                       <select required name="penulis" id="penulis" class="form-control">
                         <option value="">- pilih penulis -</option>
+                        <option value="1">Team Prolinks</option>
                         @if(count($team) > 0)
                           @foreach($team as $teams)
                             <option value="{{ $teams->id }}" {{ !empty($artikel->penulis) && $artikel->penulis == $teams->id ? 'selected':'' }} >{{ $teams->nama }} - {{ $teams->jabatan }}</option>

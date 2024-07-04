@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="{{ url('frontend/images/favicon.png') }}" type="image/x-icon" />
-    <title>{{ config('app.name', 'Protemus Admin Panel') }}</title>
+    <title>Prolinks Admin Panel</title>
 
     <!-- Scripts -->
     <link href="{{ url('backend/css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
@@ -124,18 +124,27 @@
                             </ul>
                         </li>
                         <li class="{{ $headerContent }}"> 
-                            <a href="javascript:void(0);"> <i class="fa fa-edit"></i> CONTENT <span class="plus"><i class="fa fa-plus"></i></span></a>
+                            <a href="javascript:void(0);"> <i class="fa fa-edit"></i> Resources <span class="plus"><i class="fa fa-plus"></i></span></a>
                             <ul class="{{ $activeContent }}" style="display: {{ $displayContent }};">
-                                <li> <a href="{{ route('slider') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'slider' || $uri == 'create-slider' || $uri == 'edit-slider' ? 'theme_color':'' }}">Slider</b> </a> </li>
-                                <li> <a href="{{ route('artikel') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'artikel' || $uri == 'create-artikel' || $uri == 'edit-artikel' ? 'theme_color':'' }}">Insights</b> </a> </li>
+                                <li> <a href="{{ route('slider') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'slider' || $uri == 'create-slider' || $uri == 'edit-slider' ? 'theme_color':'' }}">Slider Resource</b> </a> </li>
+                                <li> <a href="{{ route('artikel') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'artikel' || $uri == 'create-artikel' || $uri == 'edit-artikel' ? 'theme_color':'' }}">Article Resource</b> </a> </li>
                             </ul>
                         </li>
+
                         <li class="{{ $headerIndustries }}"> 
+                            <a href="javascript:void(0);"> <i class="fa fa-list-alt"></i> Pricing <span class="plus"><i class="fa fa-plus"></i></span></a>
+                            <ul class="{{ $activeIndustries }}" style="display: {{ $displayIndustries }};">
+                                <li> <a href="{{ route('industries') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'industries' || $uri == 'create-industries' || $uri == 'edit-industries' ? 'theme_color':'' }}">Configure Pricing</b> </a> </li>
+                            </ul>
+                        </li>
+
+                        <!-- <li class="{{ $headerIndustries }}"> 
                             <a href="javascript:void(0);"> <i class="fa fa-list-alt"></i> INDUSTRIES <span class="plus"><i class="fa fa-plus"></i></span></a>
                             <ul class="{{ $activeIndustries }}" style="display: {{ $displayIndustries }};">
                                 <li> <a href="{{ route('industries') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'industries' || $uri == 'create-industries' || $uri == 'edit-industries' ? 'theme_color':'' }}">Industries</b> </a> </li>
                             </ul>
-                        </li>
+                        </li> -->
+
                         <li class="{{ $headerServices }}"> 
                             <a href="javascript:void(0);"> <i class="fa fa-cog"></i> SERVICES <span class="plus"><i class="fa fa-plus"></i></span></a>
                             <ul class="{{ $activeServices }}" style="display: {{ $displayServices }};">
@@ -157,7 +166,7 @@
             <div class="contentpanel">
                 <div class="pull-left breadcrumb_admin clear_both">
                     <div class="pull-left page_title theme_color">
-                      <h6 style="padding-top: 10px;">Admin Panel Protemus</h6>
+                      <h6 style="padding-top: 10px;">Prolinks Admin Panel</h6>
                     </div>
                 </div>
                 <div class="container clear_both padding_fix">

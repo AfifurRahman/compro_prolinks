@@ -28,16 +28,51 @@
     <div class="resource-container-2">
         <div class="container">
             <div class="category">
-                <a href="">All categories</a>
-                <a href="">Deals</a>
+                <a href="{{ route('resource', ['page' => 1, 'category' => 'all' ]) }}">All categories</a>
+                @foreach($categories as $category)
+                    <a href="{{ route('resource', ['page' => 1, 'category' => $category->id ]) }}">{{ $category->nama_kategori }}</a>
+                @endforeach
+                <!--<a href="">Deals</a>
                 <a href="">Due diligence</a>
                 <a href="">Finances</a>
                 <a href="">M&A</a>
                 <a href="">industries</a>
-                <a href="">Virtual data room</a>
+                <a href="">Virtual data room</a> -->
+            </div>
+            
+            <div class="content-container">
+                @php $counter = 0;@endphp
+                @foreach($articles as $article)
+                    @if($counter % 3 == 0)
+                        <div class="content-row">
+                    @endif
+
+                    <div class="content-item">
+                        <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
+                        <p class="resource-category">{{ DB::table('category_article')->where('id', $article->category_article_id)->value('nama_kategori') }}</p>
+                        <p class="content-title">{{ $article->judul }}</p>
+                        <p class="content-preview">{{ $article->deskripsi }}</p>
+                        <p class="resource-date">{{ (new DateTime($article->created_at))->format('j F Y') }} • 5 min</p>
+                    </div>
+                    
+                    @php $counter++; @endphp
+
+                    @if($counter % 3 == 0)
+                        </div> 
+                    @endif
+                @endforeach
+
+                @if($counter % 3 != 0)
+                    @for($i = 1; $i <= (($counter % 3) - 3) * -1; $i++)
+                        <div class="content-item-hidden">
+                        </div>
+                    @endfor
+                    </div>
+                @endif
             </div>
 
-            <div class="content-row">
+                    
+            <!-- <div class="content-row">
                 <div class="content-item">
                     <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
                     <p class="resource-category">M&A</p>
@@ -59,68 +94,18 @@
                     <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
                     <p class="resource-date">24 May 2024 • 5 min</p>
                 </div>
-            </div>
-
-            <div class="content-row">
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-            </div>
-
-            <div class="content-row">
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-                <div class="content-item">
-                    <img src="{{ url('frontend/images/resource_banner/khalid.png') }}"> 
-                    <p class="resource-category">M&A</p>
-                    <p class="content-title">How AI is Revolutionizing M&A Processes</p>
-                    <p class="content-preview">Learn how VDRs provide robust data protection during financial transactions, safeguarding sensitive information.</p>
-                    <p class="resource-date">24 May 2024 • 5 min</p>
-                </div>
-            </div>
+            </div> -->
 
             <div class="content-page-number">
                 <center>
                     <div class="paging">
-                        <button href="" class="page-number">1</button>
-                        <button href="" class="page-number">2</button>
-                        <button href="" class="page-number">3</button>
-                        <button href="" class="page-number">4</button>
-                        <button href="" class="page-number">5</button>
-                        <button href="" class="page-number">6</button>
+                        @for($i = 1; $i <= $pagecount; $i++)
+                            <a href="{{ route('resource', ['page' => $i , 'category' => $categoryarticle]) }}" class="page-number">{{$i}}</a>
+                        @endfor
                     </div>
                 </center>
             </div>
+        
         </div>
     </div>
 

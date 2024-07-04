@@ -5,11 +5,11 @@
         <div class="col-md-12">
           	<div class="block-web">
 	            <div class="header">
-	            	<h3 class="content-header">List Insights</h3>
+	            	<h3 class="content-header">List Article</h3>
 	            </div>
 	            <div class="porlets-content">
-	            	<a href="{{ route('create-artikel') }}" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp; Tambah Insights</a>&nbsp;
-	            	<a href="{{ route('kategori-artikel') }}" class="btn btn-warning"><i class="fa fa-list-alt"></i>&nbsp; Kategori Insights</a> <br><br>
+	            	<a href="{{ route('create-artikel') }}" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp; Tambah Article</a>&nbsp;
+	            	<a href="{{ route('kategori-artikel') }}" class="btn btn-warning"><i class="fa fa-list-alt"></i>&nbsp; Kategori Article</a> <br><br>
 	            	<table class="table table-hover table-bordered" id="dynamic-table">
 	            		<thead>
 	            			<tr>

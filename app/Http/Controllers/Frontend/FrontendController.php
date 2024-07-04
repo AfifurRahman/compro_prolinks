@@ -49,10 +49,27 @@ class FrontendController extends Controller
         return view('frontend.home.contact');
     }
 
-    public function resource()
+    public function resource(Request $request)
     {
-        $article = ArtikelModel::where('status', 1)->orderBy('id','DESC')->get();
-        return view('frontend.home.resource', compact('article'));
+        try {
+            $pagenumber = $request->input('page', 1);
+            $categoryarticle = $request->input('category', 'all');
+    
+            if ($categoryarticle == 'all') {
+                $articles = ArtikelModel::where('status', 1)->orderBy('id','DESC')->skip(9 * ($pagenumber -1))->take(9)->get();
+                $pagecount = ceil(ArtikelModel::where('status', 1)->count() / 9);
+            } else {
+                $articles = ArtikelModel::where('status', 1)->where('category_article_id', $categoryarticle)->orderBy('id','DESC')->skip(9 * ($pagenumber -1))->take(9)->get();
+                $pagecount = ceil(ArtikelModel::where('status', 1)->where('category_article_id', $categoryarticle)->count() / 9);
+            }
+    
+            $categories = KategoriArtikelModel::where('status', 1)->orderBy('id', 'DESC')->get();
+           
+            return view('frontend.home.resource', compact('articles', 'categories', 'pagecount', 'categoryarticle'));
+        } catch (\Exception $e) {
+            // nothing
+        }
+        
     }
 
     public function clear_view_cache()
