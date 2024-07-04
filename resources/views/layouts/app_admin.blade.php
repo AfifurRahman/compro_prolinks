@@ -110,6 +110,7 @@
                         <li> 
                             <a href="{{ route('home') }}"> <i class="fa fa-home"></i> DASHBOARD</a>
                         </li>
+                        <!--
                         <li class="{{ $headerInformation }}"> 
                             <a href="javascript:void(0);"> <i class="fa fa-folder-open"></i> INFORMATION <span class="plus"><i class="fa fa-plus"></i></span></a>
                             <ul class="{{ $activeInformation }}" style="display: {{ $displayInformation }};">
@@ -123,6 +124,7 @@
                                 <li> <a href="{{ route('social-media') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'social-media' || $uri == 'create-social-media' || $uri == 'edit-social-media' ? 'theme_color':'' }}">Social Media</b> </a> </li>
                             </ul>
                         </li>
+                        -->
                         <li class="{{ $headerContent }}"> 
                             <a href="javascript:void(0);"> <i class="fa fa-edit"></i> Resources <span class="plus"><i class="fa fa-plus"></i></span></a>
                             <ul class="{{ $activeContent }}" style="display: {{ $displayContent }};">
@@ -143,7 +145,7 @@
                             <ul class="{{ $activeIndustries }}" style="display: {{ $displayIndustries }};">
                                 <li> <a href="{{ route('industries') }}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b class="{{ $uri == 'industries' || $uri == 'create-industries' || $uri == 'edit-industries' ? 'theme_color':'' }}">Industries</b> </a> </li>
                             </ul>
-                        </li> -->
+                        </li> 
 
                         <li class="{{ $headerServices }}"> 
                             <a href="javascript:void(0);"> <i class="fa fa-cog"></i> SERVICES <span class="plus"><i class="fa fa-plus"></i></span></a>
@@ -160,6 +162,7 @@
                         <li class="{{ $headerQuestions }}"> 
                             <a href="{{ route('questions') }}"> <i class="fa fa-question"></i> QUESTIONS</a>
                         </li>
+                        -->
                     </ul>
                 </div>
             </div>
